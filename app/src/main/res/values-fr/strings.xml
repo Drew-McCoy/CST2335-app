@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Drew\'s Android labs</string>
+    <string name="button">Cliquez MOI</string>
+    <string name="text">Bonjour Tour le Monde</string>
+</resources>
