@@ -62,5 +62,11 @@
         tools:layout_editor_absoluteX="5dp"
         tools:layout_editor_absoluteY="210dp" />
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="199dp"
+        android:layout_height="188dp"
+        app:srcCompat="@drawable/treeimg" />
+
 
 </LinearLayout>
