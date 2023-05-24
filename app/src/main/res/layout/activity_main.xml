@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,23 +9,58 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="172dp"
+        android:layout_height="25dp"
         android:orientation="vertical"
         android:text="@string/text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.004" />
 
     <Button
-        android:backgroundTint="@color/navy"
         android:id="@+id/button"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_width="174dp"
+        android:layout_height="117dp"
         android:layout_marginBottom="55dp"
+        android:backgroundTint="@color/navy"
         android:text="@string/button"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:layout_editor_absoluteX="0dp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <EditText
+        android:layout_width="96dp"
+        android:layout_height="57dp"
+        android:autofillHints="true"
+        android:inputType="text"
+        android:text="edit me"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="142dp" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="85dp" />
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="113dp"
+        android:layout_height="50dp"
+        android:text="Switch"
+        tools:layout_editor_absoluteX="-3dp"
+        tools:layout_editor_absoluteY="35dp" />
+
+    <RadioButton
+        android:id="@+id/radioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RadioButton"
+        tools:layout_editor_absoluteX="5dp"
+        tools:layout_editor_absoluteY="210dp" />
+
+
+</LinearLayout>
