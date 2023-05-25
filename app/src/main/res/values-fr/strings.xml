@@ -3,4 +3,5 @@
     <string name="app_name">Drew\'s Android labs</string>
     <string name="button">Cliquez MOI</string>
     <string name="text">Bonjour Tour le Monde</string>
+    <string name="imgdesc">Un image de Drew McCoy</string>
 </resources>

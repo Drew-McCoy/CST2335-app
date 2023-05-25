@@ -4,6 +4,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
 
 import android.os.Bundle;
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.CompoundButton;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
+
 import algonquin.cst2335.mcco0553.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
@@ -20,7 +29,18 @@ public class MainActivity extends AppCompatActivity {
 
         variableBinding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView( variableBinding.getRoot() );
-        setContentView(R.layout.activity_main);
+
+        variableBinding.button.setOnClickListener((click)->{
+            model.newText = "you clicked me";
+            variableBinding.text.setText(model.newText);
+        });
+        variableBinding.imageButton2.setOnClickListener((click) ->{
+            CharSequence text = "Hello toast!";
+            int duration = Toast.LENGTH_SHORT;
+
+            Toast toast = Toast.makeText(this, text, duration);
+            toast.show();
+        });
 
 
     }
