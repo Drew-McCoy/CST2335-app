@@ -13,6 +13,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.nio.charset.Charset;
+
 import algonquin.cst2335.mcco0553.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
@@ -35,11 +37,51 @@ public class MainActivity extends AppCompatActivity {
             variableBinding.text.setText(model.newText);
         });
         variableBinding.imageButton2.setOnClickListener((click) ->{
-            CharSequence text = "Hello toast!";
+            CharSequence text = "150dp x 150dp";
             int duration = Toast.LENGTH_SHORT;
 
             Toast toast = Toast.makeText(this, text, duration);
             toast.show();
+        });
+
+        model.isOn.observe(this, (newValue) ->{
+
+            String checkStr = "";
+            String radioStr = "";
+            String switchStr= "";
+            if(variableBinding.checkbox.isChecked()){
+                checkStr = "Check box is on\n";
+            }
+            else{
+                checkStr = "Check box is off\n";
+            }
+            if(variableBinding.switch1.isChecked()){
+                switchStr = "Switch is on\n";
+            }
+            else{
+                switchStr = "Switch is off\n";
+            }
+            if(variableBinding.radioButton.isChecked()){
+                radioStr = "Radio Button on \n";
+            }
+            else{
+                radioStr = "Radio Button off\n";
+            }
+            CharSequence outStr = checkStr+switchStr+radioStr;
+            int duration = Toast.LENGTH_SHORT;
+
+            Toast toast = Toast.makeText(this, outStr, duration);
+            toast.show();
+        });
+
+        variableBinding.checkbox.setOnCheckedChangeListener((a,b)->{
+            model.isOn.postValue(b);
+        });
+        variableBinding.radioButton.setOnCheckedChangeListener((a,b)->{
+            model.isOn.postValue(b);
+        });
+        variableBinding.switch1.setOnCheckedChangeListener((a,b)->{
+            model.isOn.postValue(b);
         });
 
 

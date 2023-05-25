@@ -36,11 +36,12 @@
         android:layout_height="57dp"
         android:autofillHints="true"
         android:inputType="text"
-        android:text="edit me"
+        android:text="@string/edit"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="142dp" />
 
     <CheckBox
+        android:id="@+id/checkbox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/button"
@@ -51,7 +52,7 @@
         android:id="@+id/switch1"
         android:layout_width="113dp"
         android:layout_height="50dp"
-        android:text="Switch"
+        android:text="@string/switchB"
         tools:layout_editor_absoluteX="-3dp"
         tools:layout_editor_absoluteY="35dp" />
 
@@ -59,22 +60,22 @@
         android:id="@+id/radioButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="RadioButton"
+        android:text="@string/radio"
         tools:layout_editor_absoluteX="5dp"
         tools:layout_editor_absoluteY="210dp" />
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="163dp"
-        android:layout_height="195dp"
-        app:srcCompat="@drawable/treeimg" />
-
     <ImageButton
         android:id="@+id/imageButton2"
-        android:layout_width="142dp"
-        android:layout_height="136dp"
-        app:srcCompat="@drawable/meimg"
-        android:contentDescription="@string/button"/>
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:contentDescription="@string/button"
+        app:srcCompat="@drawable/meimg" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="206dp"
+        android:layout_height="131dp"
+        app:srcCompat="@drawable/macdaddy" />
 
 
 </LinearLayout>

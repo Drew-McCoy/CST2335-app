@@ -3,4 +3,7 @@
     <string name="button">Click ME</string>
     <string name="text">Hello World!</string>
     <string name="imgdesc">an Image of Drew McCoy</string>
+    <string name="edit">Edit me!</string>
+    <string name="switchB">Switch</string>
+    <string name="radio">Radio Button</string>
 </resources>

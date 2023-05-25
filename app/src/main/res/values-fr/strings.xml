@@ -4,4 +4,7 @@
     <string name="button">Cliquez MOI</string>
     <string name="text">Bonjour Tour le Monde</string>
     <string name="imgdesc">Un image de Drew McCoy</string>
+    <string name="edit">Editez Moi!</string>
+    <string name="switchB">Switch</string>
+    <string name="radio">Button Radio</string>
 </resources>
