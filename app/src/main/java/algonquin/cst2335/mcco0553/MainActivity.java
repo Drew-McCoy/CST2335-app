@@ -49,6 +49,9 @@ public class MainActivity extends AppCompatActivity {
             String checkStr = "";
             String radioStr = "";
             String switchStr= "";
+            variableBinding.checkbox.setChecked(newValue);
+            variableBinding.switch1.setChecked(newValue);
+            variableBinding.radioButton.setChecked(newValue);
             if(variableBinding.checkbox.isChecked()){
                 checkStr = "Check box is on\n";
             }
