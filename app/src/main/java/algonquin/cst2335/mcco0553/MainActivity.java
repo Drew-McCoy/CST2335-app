@@ -7,6 +7,9 @@ import android.os.Bundle;
 
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.LinearInterpolator;
+import android.view.animation.RotateAnimation;
 import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.EditText;
@@ -33,10 +36,15 @@ public class MainActivity extends AppCompatActivity {
         setContentView( variableBinding.getRoot() );
         model.isOn.observe(this,(newValue)-> {
             if(variableBinding.switch1.isChecked()){
-                variableBinding.imageView.setRotation(90);
+                RotateAnimation rotate = new RotateAnimation(0, 360, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
+                rotate.setDuration(5000);
+                rotate.setRepeatCount(Animation.INFINITE);
+                rotate.setInterpolator(new LinearInterpolator());
+
+                variableBinding.imageView.startAnimation(rotate);
             }
             else{
-                variableBinding.imageView.setRotation(0);
+                variableBinding.imageView.clearAnimation();
             }
             variableBinding.switch1.setOnCheckedChangeListener((a,b)->{
                 model.isOn.postValue(b);
