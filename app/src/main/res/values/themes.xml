@@ -2,9 +2,9 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.DrewsAndroidLabs" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
-        <item name="colorPrimary">@color/my_light_primary</item>
+        <item name="colorPrimary">@color/barColor</item>
         <item name="colorSecondary">@color/navy</item>
-        <item name="android:statusBarColor">@color/barColor</item>
+        <item name="android:statusBarColor">@color/my_light_primary</item>
     </style>
 
     <style name="Theme.DrewsAndroidLabs" parent="Base.Theme.DrewsAndroidLabs" />
