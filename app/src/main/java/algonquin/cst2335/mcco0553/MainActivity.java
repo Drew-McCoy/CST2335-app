@@ -31,6 +31,16 @@ public class MainActivity extends AppCompatActivity {
 
         variableBinding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView( variableBinding.getRoot() );
-
+        model.isOn.observe(this,(newValue)-> {
+            if(variableBinding.switch1.isChecked()){
+                variableBinding.imageView.setRotation(90);
+            }
+            else{
+                variableBinding.imageView.setRotation(0);
+            }
+            variableBinding.switch1.setOnCheckedChangeListener((a,b)->{
+                model.isOn.postValue(b);
+            });
+        });
     }
 }

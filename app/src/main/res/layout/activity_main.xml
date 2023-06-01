@@ -53,7 +53,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button2"
-        app:srcCompat="@drawable/frenchflag" />
+        app:srcCompat="@drawable/flag" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
